@@ -1,0 +1,6 @@
+{
+  "name": "Polley AI Developer Workspace",
+  "description": "An expert development environment containing production-ready Android source code for local low-memory AI inference, paired with a functional interactive device emulator to test Polley AI.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

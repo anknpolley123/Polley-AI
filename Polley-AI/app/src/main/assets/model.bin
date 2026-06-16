@@ -1,0 +1,11 @@
+# Polley AI Local Weights Descriptor File
+# In a production runtime, this represents a multi-gigabyte pre-compiled LLM model file (e.g., GGUF, ONNX, or Custom FlatBuffers) mapped directly into virtual memory.
+# MainActivity.java uses AssetFileDescriptor, FileInputStream, and FileChannel.MapMode.READ_ONLY to map this file into a MappedByteBuffer.
+MODEL_FORMAT=FLATBUFFERS
+MODEL_VERSION=1.4.0
+PARAMETERS_COUNT=1350000000
+QUANTIZATION_TYPE=INT4
+VOCAB_SIZE=32000
+CONTEXT_LENGTH=2048
+REDUCE_MEMORY_FOOTPRINT=TRUE
+THREAD_COUNT=4

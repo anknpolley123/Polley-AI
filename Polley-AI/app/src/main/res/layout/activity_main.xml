@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#121214">
+
+    <!-- Header Frame for Polley AI Title -->
+    <RelativeLayout
+        android:id="@+id/header_container"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:background="#1A1A1E"
+        android:paddingHorizontal="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="Polley AI"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:text="MULTIMODAL OFFLINE"
+            android:textColor="#14B8A6"
+            android:textSize="11sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <!-- Scrollable Message Bubble Thread Container -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/chat_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/input_container"
+        android:layout_below="@+id/header_container"
+        android:padding="8dp"
+        android:clipToPadding="false" />
+
+    <!-- Keyboard Safe Text input area layout with Multimodal buttons -->
+    <LinearLayout
+        android:id="@+id/input_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#1A1A1E"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="8dp">
+
+        <!-- Paint/Prompt diffusion button -->
+        <ImageButton
+            android:id="@+id/image_generate_button"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@android:color/transparent"
+            android:src="@android:drawable/ic_menu_gallery"
+            android:tint="#14B8A6"
+            android:contentDescription="Generate image local prompt button"
+            android:layout_marginEnd="4dp"/>
+
+        <!-- Speech-to-Text Whisper integration button -->
+        <ImageButton
+            android:id="@+id/mic_whisper_button"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@android:color/transparent"
+            android:src="@android:drawable/ic_btn_speak_now"
+            android:tint="#3D8BFF"
+            android:contentDescription="Record offline speech audio button"/>
+
+        <EditText
+            android:id="@+id/message_input"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:hint="Instruct Polley AI..."
+            android:textColorHint="#6B6F7A"
+            android:textColor="#FFFFFF"
+            android:textSize="15sp"
+            android:maxLines="4"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="8dp"/>
+
+        <ImageButton
+            android:id="@+id/send_button"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:background="@android:color/transparent"
+            android:src="@android:drawable/ic_menu_send"
+            android:tint="#14B8A6"
+            android:contentDescription="Send prompt button"/>
+    </LinearLayout>
+
+</RelativeLayout>
