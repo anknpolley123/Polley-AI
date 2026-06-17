@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Polley-AI</string>
+    <string name="title_activity_main">Polley-AI</string>
+    <string name="package_name">com.ankon.polleyai</string>
+    <string name="custom_url_scheme">com.ankon.polleyai</string>
+</resources>
